@@ -1,14 +1,24 @@
 /*-----------------------------------*\
   #style.css
-\*--------------------------------*/
+\*-----------------------------------*/
+
+/**
+ * copyright 2022 codewithsadee
+ */
+
+
+
+
 
 /*-----------------------------------*\
   #CUSTOM PROPERTY
-\*--------------------------------*/
+\*-----------------------------------*/
 
 :root {
 
-  /*color*/
+  /**
+   * colors
+   */
 
   --battleship-gray: hsl(0, 0%, 53%);
   --viridian-green: hsl(180, 98%, 31%);
@@ -26,7 +36,9 @@
   --black: hsl(0, 0%, 0%);
   --jet: hsl(0, 0%, 20%);
 
-  /* typogra*/
+  /**
+   * typography
+   */
 
   --ff-abril-fatface: 'Abril Fatface', cursive;
   --ff-comforter-brush: 'Comforter Brush', cursive;
@@ -46,15 +58,21 @@
   --fw-600: 600;
   --fw-700: 700;
 
-  /*border radius*/
+  /**
+   * border radius
+   */
 
   --radius-6: 6px;
 
-  /*spacing*/
+  /**
+   * spacing
+   */
 
   --section-padding: 40px;
 
-  /*transition*/
+  /**
+   * transition
+   */
 
   --transition-1: 0.15s ease;
   --transition-2: 0.35s ease;
@@ -68,7 +86,7 @@
 
 /*-----------------------------------*\
   #RESET
-\*--------------------------------*/
+\*-----------------------------------*/
 
 *,
 *::before,
@@ -131,7 +149,7 @@ body {
 
 /*-----------------------------------*\
   #REUSED STYLE
-\*--------------------------------*/
+\*-----------------------------------*/
 
 .container { padding-inline: 15px; }
 
@@ -145,10 +163,7 @@ body {
   border-radius: var(--radius-6);
 }
 
-.btn-secondary:is(:hover, :focus) {
-  --background: transparent;
-  --color: var(--white-1);
-}
+
 
 .btn-primary {
   --background: var(--viridian-green);
@@ -270,7 +285,7 @@ body {
 
 /*-----------------------------------*\
   #HEADER
-\*--------------------------------*/
+\*-----------------------------------*/
 
 .header {
   background: var(--viridian-green);
@@ -342,7 +357,7 @@ body {
 
 /*-----------------------------------*\
   #HERO
-\*--------------------------------*/
+\*-----------------------------------*/
 
 .shape { display: none; }
 
@@ -384,7 +399,7 @@ body {
 
 /*-----------------------------------*\
   #DESTINATION
-\*--------------------------------*/
+\*-----------------------------------*/
 
 .destination .section-subtitle {
   text-align: center;
@@ -445,7 +460,7 @@ body {
 
 /*-----------------------------------*\
   #POPULAR
-\*--------------------------------*/
+\*-----------------------------------*/
 
 .popular-card :is(.card-price, .card-rating) {
   color: var(--white-1);
@@ -475,7 +490,7 @@ body {
 
 /*-----------------------------------*\
   #ABOUT
-\*--------------------------------*/
+\*-----------------------------------*/
 
 .about-content { margin-bottom: 50px; }
 
@@ -525,7 +540,7 @@ body {
 
 /*-----------------------------------*\
   #BLOG
-\*--------------------------------*/
+\*-----------------------------------*/
 
 .blog { padding-bottom: 100px; }
 
@@ -565,7 +580,7 @@ body {
 
 /*-----------------------------------*\
   #FOOTER
-\*--------------------------------*/
+\*-----------------------------------*/
 
 .footer {
   background-color: var(--oxford-blue);
@@ -670,7 +685,7 @@ body {
 
 /*-----------------------------------*\
   #GO TO TOP
-\*--------------------------------*/
+\*-----------------------------------*/
 
 .go-top {
   position: fixed;
@@ -700,18 +715,23 @@ body {
 
 /*-----------------------------------*\
   #RESPONSIVE
-\*--------------------------------*/
+\*-----------------------------------*/
 
-/*sponsive for larger than 575px screen*/
+/**
+ * responsive for larger than 575px screen 
+ */
 
 @media (min-width: 575px) {
 
-  /*CUSTOM PROPERTY*/
+  /**
+   * CUSTOM PROPERTY
+   */
 
   :root {
 
-    /** typography
-*/
+    /**
+     * typography
+     */
 
     --fs-1: 5rem;
     --fs-3: 4rem;
@@ -721,13 +741,17 @@ body {
 
 
 
-  /*HERO*/
+  /**
+   * HERO
+   */
 
   .hero-text { --fs-7: 1.8rem; }
 
 
 
-  /*FOOTER*/
+  /**
+   * FOOTER
+   */
 
   .footer-top { grid-template-columns: 1fr 1fr; }
 
@@ -737,11 +761,15 @@ body {
 
 
 
-/*sponsive for larger than 768px screen*/
+/**
+ * responsive for larger than 768px screen 
+ */
 
 @media (min-width: 768px) {
 
-  /*REUSED STYLE*/
+  /**
+   * REUSED STYLE
+   */
 
   .container {
     max-width: 750px;
@@ -753,7 +781,9 @@ body {
 
 
 
-  /*HERO*/
+  /**
+   * HERO
+   */
 
   .hero {
     min-height: 550px;
@@ -769,7 +799,9 @@ body {
 
   
 
-  /*DESTINATION*/
+  /**
+   * DESTINATION
+   */
 
   .destination-list > li { width: calc(33.33% - 20px); }
 
@@ -777,7 +809,9 @@ body {
 
 
 
-  /*FOOTER*/
+  /**
+   * FOOTER
+   */
 
   .footer { --fs-7: 1.6rem; }
 
@@ -796,22 +830,28 @@ body {
 
 
 
-/*sponsive for larger than 992px screen*/
+/**
+ * responsive for larger than 992px screen 
+ */
 
 @media (min-width: 992px) {
 
-  /*CUSTOM PROPERTY*/
+  /**
+   * CUSTOM PROPERTY
+   */
 
   :root {
 
-    /** typography
-*/
+    /**
+     * typography
+     */
 
     --fs-2: 3.5rem;
     --fs-3: 4.4rem;
 
-    /** spacing
-*/
+    /**
+     * spacing
+     */
 
     --section-padding: 60px;
 
@@ -819,7 +859,9 @@ body {
 
 
 
-  /*REUSED STYLE*/
+  /**
+   * REUSED STYLE
+   */
 
   .container { max-width: 980px; }
 
@@ -828,7 +870,9 @@ body {
 
 
 
-  /*HEADER*/
+  /**
+   * HEADER
+   */
 
   .nav-toggle-btn { display: none; }
 
@@ -857,7 +901,9 @@ body {
 
 
 
-  /*HERO*/
+  /**
+   * HERO
+   */
 
   .hero {
     position: relative;
@@ -897,7 +943,9 @@ body {
 
 
 
-  /*DESTINATION*/
+  /**
+   * DESTINATION
+   */
 
   .destination {
     --fs-4: 3.2rem;
@@ -906,7 +954,9 @@ body {
 
 
 
-  /*ABOUT*/
+  /**
+   * ABOUT
+   */
 
   .about .container {
     display: grid;
@@ -919,7 +969,9 @@ body {
 
 
 
-  /*FOOTER*/
+  /**
+   * FOOTER
+   */
 
   .footer-top { grid-template-columns: 1fr 1fr 1fr 2fr; }
 
@@ -929,15 +981,21 @@ body {
 
 
 
-/*sponsive for larger than 1200px screen*/
+/**
+ * responsive for larger than 1200px screen 
+ */
 
 @media (min-width: 1200px) {
 
-  /*CUSTOM PROPERTY*/
+  /**
+   * CUSTOM PROPERTY
+   */
 
   :root {
 
-    /* typography*/
+    /**
+     * typography
+     */
 
     --fs-1: 6rem;
 
@@ -945,7 +1003,9 @@ body {
 
 
 
-  /*REUSED STYLE*/
+  /**
+   * REUSED STYLE
+   */
 
   .container { max-width: 1150px; }
 
@@ -953,13 +1013,17 @@ body {
 
 
 
-  /*HEADER*/
+  /**
+   * HEADER
+   */
 
   .navbar-list { gap: 50px; }
 
 
 
-  /*ABOUT*/
+  /**
+   * ABOUT
+   */
 
   .about .container { grid-template-columns: 0.7fr 1fr; }
 

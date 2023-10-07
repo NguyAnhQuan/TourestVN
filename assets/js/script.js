@@ -1,20 +1,26 @@
 
-// hiển thị thanh điều hướng khi < 992px
-const navToggleBtn = document.querySelector(".nav-toggle-btn");
-const header = document.querySelector(".header");
+/**
+ * navbar toggle
+ */
 
-navToggleBtn.addEventListener("click",  () => {
+const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
+const header = document.querySelector("[data-header]");
+
+navToggleBtn.addEventListener("click", function () {
   this.classList.toggle("active");
   header.classList.toggle("active");
 });
 
 
 
-// hiển thị nút lên trên khi cuộn cửa sổ tới 500px
-
+/**
+ * show go top btn when scroll window to 500px
+ */
 
 const goTopBtn = document.querySelector("[data-go-top]");
 
-window.addEventListener("scroll", () => {
-  goTopBtn.classList.toggle("active", window.scrollY >= 500);
+window.addEventListener("scroll", function () {
+  window.scrollY >= 500 ? goTopBtn.classList.add("active")
+    : goTopBtn.classList.remove("active");
 });
+
