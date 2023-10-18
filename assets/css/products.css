@@ -302,6 +302,11 @@ img {
   background: #c7b200;
 }
 
+.content-product .content-product-deltals .btn-cart:is(:hover, :focus) {
+  background: transparent;
+  color: var(--viridian-green);
+  border-color: 2px var(--viridian-green);
+}
 
 
 
