@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #3498db, #8e44ad);
+}
+
+header {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 90px;
+}
+
+.member {
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.member:hover {
+    transform: scale(1.1);
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #3498db;
+}
+
+h2 {
+    margin: 10px 0;
+}
+
+p {
+    margin: 5px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header, .member {
+    animation: fadeIn 1s forwards;
+}
+
+.member:nth-child(odd) {
+    animation-delay: 0.5s;
+}
+
+.member:nth-child(even) {
+    animation-delay: 1s;
+}
