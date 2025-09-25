@@ -166,8 +166,8 @@ function autoInitLoadingManager() {
 }
 
 // Tự động khởi tạo khi DOM ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', autoInitLoadingManager);
-} else {
-    autoInitLoadingManager();
-}
+// if (document.readyState === 'loading') {
+//     document.addEventListener('DOMContentLoaded', autoInitLoadingManager);
+// } else {
+//     autoInitLoadingManager();
+// }
