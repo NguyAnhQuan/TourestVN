@@ -1,2 +1,0 @@
-# BTLwebDesign
-AnhQuan&AnBinh

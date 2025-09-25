@@ -451,3 +451,197 @@ img {
   .content-product .content-product-deltals .price .money{font-size: 70%;}
   .content-product .content-product-deltals .btn-cart{font-size: 70%;}
 }
+
+/* ----- Card improvements & hover like homepage destination ----- */
+.products ul .main-product{
+  position: relative;
+  border-radius: var(--radius-6);
+  overflow: hidden;
+  background: var(--white-1);
+  transition: transform var(--transition-2), box-shadow var(--transition-2);
+}
+.products ul .main-product:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px hsla(0,0%,0%,0.15);
+}
+.products ul .img-product{
+  position: relative;
+  overflow: hidden;
+}
+.products ul .img-product img{
+  transition: var(--transition-2);
+  border: none;
+}
+.products ul .main-product:hover .img-product img{
+  transform: scale(1.08);
+}
+/* stronger always-on overlay for better subtitle contrast */
+.products ul .img-product::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(hsla(222,46%,17%,0), hsla(222,46%,17%,0.55));
+  opacity: 1;
+  transition: var(--transition-2);
+}
+.products ul .main-product:hover .img-product::after{ background: linear-gradient(hsla(222,46%,17%,0.05), hsla(222,46%,17%,0.75)); }
+
+/* title overlay on image */
+.content-product .content-product-h3{
+  position: relative;
+  z-index: 2;
+  color: var(--white-1);
+  text-align: left;
+  font-weight: var(--fw-600);
+  line-height: 1.4;
+  margin: -58px 12px 0 12px; /* pull title over image bottom */
+  max-height: none;
+  min-height: auto;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+/* ensure price + button stay below */
+.content-product .content-product-deltals{
+  padding: 70px 12px 16px 12px; /* make room for overlay title */
+  justify-content: space-between;
+}
+.main-product .content-product .content-product-deltals .price{
+  color: var(--viridian-green);
+}
+.content-product .content-product-deltals .btn-cart{
+  background: var(--viridian-green);
+  padding: 10px 16px;
+}
+.content-product .content-product-deltals .btn-cart:is(:hover, :focus){
+  background: transparent;
+  color: var(--viridian-green);
+  border: 2px solid var(--viridian-green);
+}
+
+/* subtitle overlay like homepage */
+.products .card-subtitle{
+  position: absolute;
+  left: 16px;
+  bottom: 56px;
+  z-index: 2;
+  color: var(--mikado-yellow);
+  font-family: var(--ff-comforter-brush);
+  font-size: calc(var(--fs-5) + 2px);
+  line-height: 1;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.45);
+}
+
+/* time badge top-left on image */
+.products .card-badge{
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--mikado-yellow);
+  color: var(--white-1);
+  padding: 10px 12px;
+  border-radius: var(--radius-6);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+.products .card-badge ion-icon{ font-size: 18px; }
+.products .card-badge time{ font-weight: var(--fw-700); font-size: var(--fs-8); }
+
+/* favorite (heart) button top-right */
+.products .favorite-btn{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  background: hsla(0,0%,100%,0.85);
+  color: var(--viridian-green);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 18px hsla(0,0%,0%,0.15);
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: var(--transition-2);
+}
+.products ul .main-product:hover .favorite-btn{ opacity: 1; transform: translateY(0); }
+.products .favorite-btn.active{ opacity: 1; transform: translateY(0); background: var(--viridian-green); color: var(--white-1); }
+.products .favorite-btn:is(:hover,:focus){ background: var(--viridian-green); color: var(--white-1); }
+
+/* adjust overlay title spacing and content area */
+.content-product .content-product-h3{ margin: -54px 16px 0 16px; }
+.content-product .content-product-deltals{ padding: 16px 16px 0px 16px; }
+
+/* price block with old price strike-through */
+.main-product .content-product .content-product-deltals{
+  align-items: center;
+}
+.main-product .content-product .content-product-deltals .price{
+  display: flex;
+  flex-direction: column; /* old price above main price */
+  align-items: flex-start;
+  gap: 4px;
+}
+.price .old-money{
+  color: var(--spanish-gray);
+  text-decoration: line-through;
+  font-size: 85%;
+  letter-spacing: .2px;
+}
+.price .money{ color: var(--viridian-green); font-weight: 700; font-size: 120%; }
+
+/* button */
+.content-product .content-product-deltals .btn-cart{
+  background: var(--viridian-green);
+  padding: 10px 18px;
+}
+.content-product .content-product-deltals .btn-cart:is(:hover, :focus){
+  background: transparent;
+  color: var(--viridian-green);
+  border: 2px solid var(--viridian-green);
+}
+
+/* tidy image style overrides */
+img { border: none; }
+
+/* Video hero full width */
+.video-hero{ position: relative; width: 100%; height: 52vh; overflow: hidden; }
+.video-hero .video-slider{ position: relative; width:100%; height:100%; }
+.video-hero .video-slide{ position:absolute; inset:0; width:100%; height:100%; object-fit: cover; opacity:1; filter: brightness(0.85); }
+.video-hero .video-slide.alt{ animation: crossfade 12s infinite; }
+.video-hero .video-overlay{ position:absolute; inset:0; display:grid; place-content:center; text-align:center; z-index:2; pointer-events:none; }
+
+@keyframes crossfade{
+  0%{ opacity:0; }
+  45%{ opacity:0; }
+  55%{ opacity:1; }
+  100%{ opacity:1; }
+}
+
+@media (max-width: 768px){
+  .video-hero{ height: 38vh; }
+}
+
+/* Video hero controls */
+.video-hero .video-slide{ opacity: 0; transition: opacity 800ms var(--cubic-out); }
+.video-hero .video-slide.active{ opacity: 1; }
+.video-hero .video-nav{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  background: hsla(0,0%,100%,0.6);
+  color: var(--oxford-blue);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: grid; place-items: center;
+  box-shadow: 0 6px 18px hsla(0,0%,0%,0.15);
+  opacity: .45; /* subtle by default */
+  transition: opacity var(--transition-1), background var(--transition-1), color var(--transition-1);
+}
+.video-hero .video-nav:hover,
+.video-hero .video-nav:focus{ background: var(--viridian-green); color: var(--white-1); opacity: 1; }
+.video-hero .video-nav.prev{ left: 12px; }
+.video-hero .video-nav.next{ right: 12px; }

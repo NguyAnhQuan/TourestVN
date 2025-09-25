@@ -56,11 +56,11 @@
           </li>
 
           <li>
-            <a href="#about" class="navbar-link">About Us</a>
+            <a href="./assets/html/about.html" class="navbar-link">About Us</a>
           </li>
 
           <li>
-            <a href="#tours" class="navbar-link">Tours</a>
+            <a href="./assets/html/products.html" class="navbar-link">Tours</a>
           </li>
 
           <li>
@@ -69,10 +69,6 @@
 
           <li>
             <a href="#blog" class="navbar-link">Blog</a>
-          </li>
-
-          <li>
-            <a href="./assets/html/products.html" class="navbar-link">Location</a>
           </li>
 
         </ul>
@@ -118,7 +114,7 @@
             <div class="btn-group">
               <a href="assets/html/contact.html" class="btn btn-primary">Contact Us</a>
 
-              <a href="assets/html/mem.html" class="btn btn-outline">Learn More</a>
+              <a href="assets/html/products.html" class="btn btn-outline">Learn More</a>
             </div>
 
           </div>
@@ -288,7 +284,7 @@
                   </div>
 
                   <h3 class="card-title">
-                    <a href="#">A good traveler has no fixed plans and is not intent on arriving.</a>
+                    <a href="#">Kuala Lumpur Night Markets & Iconic Skyline Experience.</a>
                   </h3>
 
                   <address class="card-location">Kuala Lumpur, Malaysia</address>
@@ -331,7 +327,7 @@
                   </div>
 
                   <h3 class="card-title">
-                    <a href="#">A good traveler has no fixed plans and is not intent on arriving.</a>
+                    <a href="#">Highlands Day Trip: Nature Trails and Hidden Temples.</a>
                   </h3>
 
                   <address class="card-location">Kuala Lumpur, Malaysia</address>
@@ -374,7 +370,7 @@
                   </div>
 
                   <h3 class="card-title">
-                    <a href="#">A good traveler has no fixed plans and is not intent on arriving.</a>
+                    <a href="#">Cultural Trails: Heritage Sites and Street Food Journey.</a>
                   </h3>
 
                   <address class="card-location">Kuala Lumpur, Malaysia</address>
@@ -741,23 +737,23 @@
           </li>
 
           <li>
-            <a href="#" class="footer-link">About</a>
+            <a href="./assets/html/about.html" class="footer-link">About</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Contact</a>
+            <a href="./assets/html/contact.html" class="footer-link">Contact</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Tours</a>
+            <a href="./assets/html/products.html" class="footer-link">Tours</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Booking</a>
+            <a href="./assets/html/booking.html" class="footer-link">Booking</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Terms & Conditions</a>
+            <a href="./assets/html/terms.html" class="footer-link">Terms & Conditions</a>
           </li>
 
         </ul>
@@ -847,6 +843,15 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+
+  <!-- Loading Page Script -->
+  <script>
+    // Show loading page on first visit
+    if (!sessionStorage.getItem('hasVisited')) {
+      sessionStorage.setItem('hasVisited', 'true');
+      window.location.href = './assets/html/loading.html';
+    }
+  </script>
 
   <!-- 
     - ionicon link

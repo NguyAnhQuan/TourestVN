@@ -1,0 +1,131 @@
+/**
+ * Utility Classes
+ * Các class tiện ích cho styling inline
+ * Tách riêng để dễ bảo trì và tái sử dụng
+ */
+
+/* Layout Utilities */
+.w-100 { width: 100%; }
+.h-100 { height: 100%; }
+
+/* Text Alignment */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Spacing Utilities */
+.m-0 { margin: 0; }
+.mb-0 { margin-bottom: 0; }
+.mt-0 { margin-top: 0; }
+.mb-20 { margin-bottom: 20px; }
+.mb-2rem { margin-bottom: 2rem; }
+
+.p-0 { padding: 0; }
+.pt-0 { padding-top: 0; }
+.pb-0 { padding-bottom: 0; }
+
+/* Display Utilities */
+.d-block { display: block; }
+.d-none { display: none; }
+.d-grid { display: grid; }
+.d-flex { display: flex; }
+
+/* Grid Utilities */
+.grid-gap-12 { gap: 12px; }
+
+/* Max Width Utilities */
+.max-w-900 { max-width: 900px; }
+.max-w-100 { max-width: 100%; }
+
+/* Margin Auto */
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* Border Utilities */
+.border-0 { border: 0; }
+
+/* About Banner Specific */
+.about-banner {
+    width: 100%;
+}
+
+.about-banner-container {
+    border-radius: var(--radius-6);
+    overflow: hidden;
+    box-shadow: 0 10px 30px hsla(0, 0%, 0%, 0.1);
+}
+
+.about-banner iframe {
+    border: 0;
+    display: block;
+}
+
+/* FAQ Section Specific */
+.faq-section {
+    padding-top: 0;
+}
+
+.faq-title {
+    text-align: center;
+}
+
+.faq-subtitle {
+    text-align: center;
+}
+
+/* Footer Background */
+.footer-bg {
+    background-image: url('../images/footer-bg.png');
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+    .max-w-900 {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+    
+    .text-center-mobile {
+        text-align: center;
+    }
+}
+
+/* Print Utilities */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* Accessibility Utilities */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Focus Utilities */
+.focus-visible:focus {
+    outline: 2px solid var(--viridian-green);
+    outline-offset: 2px;
+}
+
+/* Animation Utilities */
+.no-animation {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Color Utilities */
+.text-primary { color: var(--viridian-green); }
+.text-secondary { color: var(--granite-gray); }
+.text-accent { color: var(--yellow-1); }
+
+.bg-primary { background-color: var(--viridian-green); }
+.bg-secondary { background-color: var(--oxford-blue); }
+.bg-accent { background-color: var(--yellow-1); }

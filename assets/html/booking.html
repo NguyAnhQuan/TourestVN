@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="shortcut icon" href="../../assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../css/booking.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="booking-page">
+    <header class="header" data-header>
+        <div class="container">
+        <a href="#">
+            <h1 class="logo">Tourest</h1>
+        </a>
+        <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+            <ion-icon name="menu-outline" class="open"></ion-icon>
+            <ion-icon name="close-outline" class="close"></ion-icon>
+        </button>
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li><a href="../../index.html" class="navbar-link">Home</a></li>
+                <li><a href="about.html" class="navbar-link">About Us</a></li>
+                <li><a href="products.html" class="navbar-link">Tours</a></li>
+                <li><a href="../../index.html#destinations" class="navbar-link">Destinations</a></li>
+                <li><a href="../../index.html#blog" class="navbar-link">Blog</a></li>
+            </ul>
+            <a href="login.html" class="btn btn-secondary">Login Now</a>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <!-- Hero Section -->
+            <section class="section booking-hero">
+                <div class="container">
+                    <div class="booking-hero-content">
+                        <p class="section-subtitle">Book Your Adventure</p>
+                        <h2 class="h2 section-title">Reserve Your Perfect Tour</h2>
+                        <p class="hero-text">Experience the world with our carefully crafted tours. Book now and create unforgettable memories.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Booking Form Section -->
+            <section class="section booking-form-section">
+                <div class="container">
+                    <div class="booking-wrapper">
+                        <div class="booking-form-container">
+                            <form class="booking-form" id="bookingForm">
+                                <h3 class="form-title">Tour Booking Form</h3>
+                                
+                                <!-- Personal Information -->
+                                <div class="form-section">
+                                    <h4 class="form-section-title">Personal Information</h4>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="firstName">First Name *</label>
+                                            <input type="text" id="firstName" name="firstName" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastName">Last Name *</label>
+                                            <input type="text" id="lastName" name="lastName" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="email">Email Address *</label>
+                                            <input type="email" id="email" name="email" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone">Phone Number *</label>
+                                            <input type="tel" id="phone" name="phone" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tour Selection -->
+                                <div class="form-section">
+                                    <h4 class="form-section-title">Tour Details</h4>
+                                    <div class="form-group">
+                                        <label for="tourSelect">Select Tour *</label>
+                                        <select id="tourSelect" name="tourSelect" required>
+                                            <option value="">Choose a tour</option>
+                                            <option value="con-dao">Côn Đảo - 3 days 2 nights</option>
+                                            <option value="phu-quoc">Phú Quốc - 4 days 3 nights</option>
+                                            <option value="ha-long">Hạ Long Bay - 2 days 1 night</option>
+                                            <option value="sapa">Sapa - 3 days 2 nights</option>
+                                            <option value="hue">Huế - 2 days 1 night</option>
+                                            <option value="hoi-an">Hội An - 2 days 1 night</option>
+                                            <option value="da-nang">Đà Nẵng - 3 days 2 nights</option>
+                                            <option value="tam-dao">Tam Đảo - 2 days 1 night</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="departureDate">Departure Date *</label>
+                                            <input type="date" id="departureDate" name="departureDate" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="returnDate">Return Date *</label>
+                                            <input type="date" id="returnDate" name="returnDate" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="adults">Adults *</label>
+                                            <select id="adults" name="adults" required>
+                                                <option value="1">1 Adult</option>
+                                                <option value="2">2 Adults</option>
+                                                <option value="3">3 Adults</option>
+                                                <option value="4">4 Adults</option>
+                                                <option value="5">5+ Adults</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="children">Children</label>
+                                            <select id="children" name="children">
+                                                <option value="0">No Children</option>
+                                                <option value="1">1 Child</option>
+                                                <option value="2">2 Children</option>
+                                                <option value="3">3 Children</option>
+                                                <option value="4">4+ Children</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Special Requirements -->
+                                <div class="form-section">
+                                    <h4 class="form-section-title">Special Requirements</h4>
+                                    <div class="form-group">
+                                        <label for="dietary">Dietary Requirements</label>
+                                        <textarea id="dietary" name="dietary" placeholder="Any food allergies or dietary restrictions?"></textarea>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="accessibility">Accessibility Needs</label>
+                                        <textarea id="accessibility" name="accessibility" placeholder="Any mobility or accessibility requirements?"></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="specialRequests">Special Requests</label>
+                                        <textarea id="specialRequests" name="specialRequests" placeholder="Any special requests or additional information?"></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Terms and Conditions -->
+                                <div class="form-section">
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="terms" name="terms" required>
+                                        <label for="terms">I agree to the <a href="terms.html" target="_blank">Terms & Conditions</a> and <a href="#" target="_blank">Privacy Policy</a> *</label>
+                                    </div>
+                                    
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="newsletter" name="newsletter">
+                                        <label for="newsletter">Subscribe to our newsletter for travel tips and special offers</label>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary booking-submit">
+                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                        Book Now
+                                    </button>
+                                    <button type="button" class="btn btn-outline" onclick="resetForm()">
+                                        <ion-icon name="refresh-outline"></ion-icon>
+                                        Reset Form
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Booking Summary -->
+                        <div class="booking-summary">
+                            <h4 class="summary-title">Booking Summary</h4>
+                            <div class="summary-content">
+                                <div class="summary-item">
+                                    <span class="summary-label">Tour:</span>
+                                    <span class="summary-value" id="summaryTour">Select a tour</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Duration:</span>
+                                    <span class="summary-value" id="summaryDuration">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Travelers:</span>
+                                    <span class="summary-value" id="summaryTravelers">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Total Price:</span>
+                                    <span class="summary-value summary-price" id="summaryPrice">$0</span>
+                                </div>
+                            </div>
+                            
+                            <div class="booking-features">
+                                <h5>What's Included:</h5>
+                                <ul>
+                                    <li><ion-icon name="checkmark-circle"></ion-icon> Professional tour guide</li>
+                                    <li><ion-icon name="checkmark-circle"></ion-icon> Transportation</li>
+                                    <li><ion-icon name="checkmark-circle"></ion-icon> Accommodation</li>
+                                    <li><ion-icon name="checkmark-circle"></ion-icon> Meals as specified</li>
+                                    <li><ion-icon name="checkmark-circle"></ion-icon> Travel insurance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Information -->
+            <section class="section booking-contact">
+                <div class="container">
+                    <div class="contact-info-grid">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <ion-icon name="call-outline"></ion-icon>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Call Us</h4>
+                                <p>+84 96 278 4293</p>
+                                <span>Mon-Fri 9AM-6PM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email Us</h4>
+                                <p>anhq46724@gmail.com</p>
+                                <span>We'll respond within 24 hours</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <ion-icon name="location-outline"></ion-icon>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Visit Us</h4>
+                                <p>177 Cau Dien, Bac Tu Liem</p>
+                                <span>Hanoi, Vietnam</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer" style="background-image: url('../images/footer-bg.png')">
+        <div class="container">
+            <div class="footer-top">
+                <ul class="footer-list">
+                    <li><p class="footer-list-title">Top destination</p></li>
+                    <li><a href="#" class="footer-link">Indonesia, Jakarta</a></li>
+                    <li><a href="#" class="footer-link">Maldives, Malé</a></li>
+                    <li><a href="#" class="footer-link">Australia, Canberra</a></li>
+                    <li><a href="#" class="footer-link">Thailand, Bangkok</a></li>
+                    <li><a href="#" class="footer-link">Morocco, Rabat</a></li>
+                </ul>
+                <ul class="footer-list">
+                    <li><p class="footer-list-title">Categories</p></li>
+                    <li><a href="#" class="footer-link">Travel</a></li>
+                    <li><a href="#" class="footer-link">Lifestyle</a></li>
+                    <li><a href="#" class="footer-link">Fashion</a></li>
+                    <li><a href="#" class="footer-link">Education</a></li>
+                    <li><a href="#" class="footer-link">Food & Drink</a></li>
+                </ul>
+                <ul class="footer-list">
+                    <li><p class="footer-list-title">Quick links</p></li>
+                    <li><a href="about.html" class="footer-link">About</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    <li><a href="products.html" class="footer-link">Tours</a></li>
+                    <li><a href="booking.html" class="footer-link">Booking</a></li>
+                    <li><a href="terms.html" class="footer-link">Terms & Conditions</a></li>
+                </ul>
+                <div class="footer-list">
+                    <p class="footer-list-title">Get a newsletter</p>
+                    <p class="newsletter-text">For the latest deals and tips, travel no further than your inbox</p>
+                    <form action="" class="newsletter-form">
+                        <input type="email" name="email" required placeholder="Email address" class="newsletter-input">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <a href="#" class="logo">Tourest</a>
+                <p class="copyright">Design By <a href="#" class="copyright-link">Anh Quan</a> © .</p>
+                <ul class="social-list">
+                    <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    <li><a href="#" class="social-link"><ion-icon name="logo-google"></ion-icon></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/script.js"></script>
+    <script src="../js/booking.js"></script>
+    <script src="../../assets/js/loading-manager.js"></script>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
